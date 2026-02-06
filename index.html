@@ -13,19 +13,32 @@
 /* --- Estilo geral --- */
 
 body {
+ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   color: #3a2e2e;
+  min-height: 100vh;
+
+  background-color: #f8f4f0; /* cor elegante caso a imagem não carregue */
+}
+
+/* background real em camada separada */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 
   background:
-    linear-gradient(rgba(248,244,240,0.94), rgba(248,244,240,0.94)),
+    linear-gradient(rgba(248,244,240,0.92), rgba(248,244,240,0.92)),
     url("background.jpg");
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
+
 
 .container {
   max-width: 1000px;
@@ -233,7 +246,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body {
+  body::before {
     background-position: center top;
     background-size: cover;
   }
