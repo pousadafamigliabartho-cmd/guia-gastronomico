@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Gastronômico & Vinícolas – Espírito Santo do Pinhal</title>
+<meta name="description" content="Guia gastronômico e de vinícolas em Espírito Santo do Pinhal – SP. Restaurantes, cafés, wine bars e experiências para hóspedes da Pousada Famiglia Bartho.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+
+/* --- Estilo geral --- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #3a2e2e;
+
+  background:
+    linear-gradient(rgba(248,244,240,0.92), rgba(248,244,240,0.92)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+animation: fadeUp 0.9s ease-out;
+}
+
+/* --- Animação suave de entrada --- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.logo {
+  display: block;
+  margin: 10px auto 25px;
+  width: 220px;
+  max-width: 70%;
+  height: auto;
+}
+
+.capa {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.capa h1 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  font-size: 2.4em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  margin-top: 8px;
+  color: #6b5046;
+}
+
+/* --- Linha dourada elegante abaixo do título --- */
+.capa::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, transparent, #c6a15b, transparent);
+  opacity: 0;
+  animation: linhaDourada 1.6s ease forwards;
+}
+
+@keyframes linhaDourada {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+
+h2, .name {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+}
+
+/* --- Cards --- */
+.card {
+  background: #fffaf5;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 22px;
+  margin-bottom: 22px;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* --- Nome do local --- */
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #5a3e36;
+  margin-bottom: 10px;
+  text-shadow: 0.5px 0.5px #e0d4c9;
+}
+
+/* --- Links e horários --- */
+.links {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.links a {
+  color: #7a5347;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Botão de Rota --- */
+
+.btn {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid #7a5347;
+  color: #7a5347;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #7a5347;
+  color: #fff;
+}
+.map-btn:hover {
+  background-color: #7a5347;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  color: #6b5046;
+  margin: 40px 0;
+  font-size: 0.9em;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 16px;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .capa h1 {
+    font-size: 1.8em;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+}
+
+/* --- Animação suave dos cards ao aparecer --- */
+.card {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: revelarCard 0.8s ease forwards;
+}
+
+/* atraso progressivo elegante */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes revelarCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO DA POUSADA -->
+<img src="logo.png" alt="Pousada Famiglia Bartho" class="logo">
+
+
+<div class="capa">
+  <h1>Guia Gastronômico & Vinícolas</h1>
+  <div class="subtitle">
+    Sabores, vinhos e experiências em Espírito Santo do Pinhal – SP
+  </div>
+</div>
+
+<h2>🍽️ Restaurantes Gastronômicos & Destaques</h2>
+
+<!-- Opção Trattoria -->
+<div class="card">
+  <div class="name">Opção Trattoria</div>
+  <div class="links">
+    🕒 Ter–Sex 18:00–22:30 • Sáb 12:00–15:00 / 19:00–22:30 • Dom 12:00–15:00<br>
+    📍 Rua Abelardo César, 152 – Centro<br>
+    ☎ (19) 3661‑4646 • WhatsApp (19) 99169‑0108<br>
+    <a class="btn" href="https://www.instagram.com/opcaotrattoria/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d3802538-Opcao_Trattoria-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Opção+Trattoria+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Rizz Restaurante -->
+<div class="card">
+  <div class="name">Rizz Restaurante</div>
+  <div class="links">
+    🕒 Almoço e jantar com horários detalhados segundo avaliações locais<br>
+    📍 Rua Marechal Deodoro da Fonseca, 16 – Centro<br>
+    ☎ (19) 3661‑5503<br>
+    <a class="btn" href="https://www.instagram.com/rizzrestaurante/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d12175509-Rizz_Restaurante-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Rizz+Restaurante+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Rancho Churrascada -->
+<div class="card">
+  <div class="name">Rancho Churrascada</div>
+  <div class="links">
+    🕒 Qui–Dom 12:30–22:30<br>
+    📍 Estrada Vicinal Olavo de Almeida, Km 7 – Alto Alegre<br>
+    ☎ (11) 97220‑4444<br>
+    <a class="btn" href="https://www.instagram.com/rancho.churrascada/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Restaurant_Review-g2346599-d27414164-Reviews-Rancho_Churrascada-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Rancho+Churrascada+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Benedictus Gastronomia -->
+<div class="card">
+  <div class="name">Benedictus Gastronomia</div>
+  <div class="links">
+    🕒 Horários de funcionamento:<br>
+    Domingo: 08:00–14:00<br>
+    Segunda: 07:00–19:00<br>
+    Terça: Fechado<br>
+    Quarta: 07:00–19:00<br>
+    Quinta: 08:00–21:00<br>
+    Sexta: 08:00–21:00<br>
+    Sábado: 08:00–21:00<br>
+    📍 Centro, Espírito Santo do Pinhal<br>
+    ☎ (19) 97420‑1651<br>
+    <a class="btn" href="https://www.instagram.com/benedictusgastronomia/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d32870326-Benedictus_Gastronomia-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Benedictus+Gastronomia+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- W Bassi Restaurante -->
+<div class="card">
+  <div class="name">W Bassi Restaurante</div>
+  <div class="links">
+    🕒 Aberto para almoço e jantar em horários comuns a restaurantes locais (11:00–14:30 / 19:00–23:00)*<br>
+    📍 Av. Oliveira Mota, 39 – Centro<br>
+    ☎ (19) 3651‑1871<br>
+    <a class="btn" href="https://www.instagram.com/wbassirestaurante/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d7651710-W_Bassi-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/W+Bassi+Restaurante+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Restaurante Celeiro -->
+<div class="card">
+  <div class="name">Restaurante Celeiro</div>
+  <div class="links">
+    🕒 Domingo costuma funcionar para almoço (especialidade mineira)*<br>
+    📍 Estrada Pinhal A. Albertina, KM 1 – Areião<br>
+    ☎ (19) 99641‑7089<br>
+    <a class="btn" href="https://www.instagram.com/celeiropinhal/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d8735553-Restaurante_Celeiro-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Restaurante+Celeiro+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Fiore di Móra -->
+<div class="card">
+  <div class="name">Fiore di Móra</div>
+  <div class="links">
+    🕒 Horários de funcionamento:<br>
+    Quarta a Sábado: 11:00–15:00 | 18:00–22:30<br>
+    Domingo: 11:00–17:00<br>
+    Segunda e Terça: Fechado<br>
+    <small>Recomenda-se confirmar os horários nas redes sociais oficiais antes de visitar.</small><br>
+    📍 Espírito Santo do Pinhal<br>
+    ☎ (19) 99526‑7665<br>
+    <a class="btn" href="https://www.instagram.com/fioredimora/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Fiore+di+Mora+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Estação Antonieta -->
+<div class="card">
+  <div class="name">Restaurante Estação Antonieta</div>
+  <div class="links">
+    🕒 Funcionamento: Todos os dias, 10:00–23:00<br>
+    📍 Espírito Santo do Pinhal<br>
+    <a class="btn" href="https://www.instagram.com/estacaoantonieta/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Estação+Antonieta+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Casa do Ipê Cozinha -->
+<div class="card">
+  <div class="name">Casa do Ipê Cozinha</div>
+  <div class="links">
+    🕒 Sex 16:00–22:00 • Sáb 08:00–22:00 • Dom 09:00–15:00<br>
+    📍 Rua Jacob Worms, 360 – Vila de Fátima<br>
+    ☎ (19) 98999‑7337<br>
+    <a class="btn" href="https://www.instagram.com/casadoipecozinha/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Restaurant_Review-g2346599-d26847612-Reviews-Casa_do_Ipe_Cozinha-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Casa+do+Ipê+Cozinha+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- O GRINGO -->
+<div class="card">
+  <div class="name">O GRINGO</div>
+  <div class="links">
+    🕒 Horário a confirmar* (avaliado como aberto em horários regulares no TripAdvisor)<br>
+    📍 Centro, Espírito Santo do Pinhal<br>
+    ☎ (19) 99586‑2777<br>
+    <a class="btn" href="https://www.instagram.com/ogringopinhal/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d28296809-O_Gringo-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/O+Gringo+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Restaurante Pinhal -->
+<div class="card">
+  <div class="name">Restaurante Pinhal</div>
+  <div class="links">
+    🕒 Horário a confirmar*<br>
+    📍 Espírito Santo do Pinhal<br>
+    ☎ (19) 3651‑4828<br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Restaurant_Review-g2346599-d5350463-Reviews-Restaurante_Pinhal-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Restaurante+Pinhal+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Armazém 40 -->
+<div class="card">
+  <div class="name">Armazém 40</div>
+  <div class="links">
+    🕒 Horário a confirmar*<br>
+    📍 Praça João Pessoa, 40 – Centro<br>
+    ☎ (19) 99774‑9979<br>
+    <a class="btn" href="https://www.instagram.com/armazen40_/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Armazém+40+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Lima Limão Restaurante e Viveiro de Plantas -->
+<div class="card">
+  <div class="name">Lima Limão Restaurante e Viveiro de Plantas</div>
+  <div class="links">
+    🕒 Qui–Dom 11:30–17:00<br>
+    📍 Estrada Servidão Jayme Leme – Alto Alegre<br>
+    ☎ (19) 99663‑5100<br>
+    <a class="btn" href="https://www.limalimaopinhal.com.br/" target="_blank">🌐 Site oficial</a><br>
+    <a class="btn" href="https://www.instagram.com/limalimaorestauranteviveiro/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Lima+Limão+Restaurante+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Churrascaria Deoclécio -->
+<div class="card">
+  <div class="name">Churrascaria Deoclécio</div>
+  <div class="links">
+    🕒 Horários de funcionamento:<br>
+    Segunda a Quinta: Fechado<br>
+    Sexta: 18:00–23:00<br>
+    Sábado: 12:00–23:00<br>
+    Domingo: 12:00–17:00<br>
+    📍 Espírito Santo do Pinhal<br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Restaurant_Review-g2346599-d9604875-Reviews-Churrascaria_Deoclecio-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Churrascaria+Deoclecio+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Bar Clube -->
+<div class="card">
+  <div class="name">Bar Clube</div>
+  <div class="links">
+    🕒 Horário a confirmar*<br>
+    📍 Espírito Santo do Pinhal<br>
+    <a class="btn" href="https://www.instagram.com/barclubepinhal/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Bar+Clube+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Toca do Kainã -->
+<div class="card">
+  <div class="name">Toca do Kainã</div>
+  <div class="links">
+    🕒 Geralmente Fri–Dom 09:00–17:00 / sábado e domingo brunch (TripAdvisor indica experiência de café)— verificar contato<br>
+    📍 Santo Antônio do Jardim (próximo) ([turn1search1])<br>
+    ☎ (19) 99672‑0635<br>
+    <a class="btn" href="https://www.tripadvisor.com/Restaurant_Review-g2346599-d28264718-Toca_Do_Kayna-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Toca+do+Kainã+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Paganini & Palermo Empório Rural -->
+<div class="card">
+  <div class="name">Paganini & Palermo Empório Rural</div>
+  <div class="links">
+    🕒 Sáb, Dom e feriados 09:00–17:00 (café colonial)<br>
+    📍 Vicinal Agenor Mondadori, Km 03 – Pinhal<br>
+    ☎ (19) 99355‑6666<br>
+    <a class="btn" href="https://www.instagram.com/paganinipalermo/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Restaurant_Review-g2346599-d13281468-Reviews-Paganini_Palermo_Emporio_Rural-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Paganini+%26+Palermo+Empório+Rural" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<h2>☕ Cafeterias & Wine Bar</h2>
+
+<!-- Sweet Café -->
+<div class="card">
+  <div class="name">Sweet Café</div>
+  <div class="links">
+    🕒 Seg–Sex 09:30–18:00 • Sáb 09:00–17:00 ([turn0search4])<br>
+    📍 Rua João Vicente, 109 – Centro<br>
+    ☎ (19) 3651‑2707<br>
+    <a class="btn" href="https://www.instagram.com/sweetcafepinhal/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Sweet+Café+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Loretto Café -->
+<div class="card">
+  <div class="name">Loretto Café</div>
+  <div class="links">
+    🕒 Seg–Qui 09:00–18:00 • Sáb 09:00–17:00 • Dom 09:00–14:00 ([turn0search4])<br>
+    📍 Rua Jorge Tibiriçá, 328 – Centro<br>
+    ☎ (19) 3651‑2048 • WhatsApp (19) 99579‑6776<br>
+    <a class="btn" href="https://www.instagram.com/lorettocafe/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Loretto+Café+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Santa Maria Coffee & Wine House -->
+<div class="card">
+  <div class="name">Santa Maria Coffee & Wine House</div>
+  <div class="links">
+    🕒 Ter–Qua 10:00–19:00 • Qui–Sex 10:00–22:00 • Sáb 08:30–22:00 • Dom 08:30–18:00 ([turn0search4])<br>
+    📍 Floriano Peixoto, 227 – Centro<br>
+    ☎ (19) 99784‑7150<br>
+    <a class="btn" href="https://www.instagram.com/santamariacoffee/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Santa+Maria+Coffee+Wine+House" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<h2>🍇 Vinícolas & Experiências Vínicas</h2>
+
+<!-- InnVernia – Vinícola, Restaurante e Winebar -->
+<div class="card">
+  <div class="name">InnVernia – Vinícola, Restaurante e Winebar</div>
+  <div class="links">
+    🕒 Visitação e degustações: Qui–Dom 10:00–16:30<br>
+    📍 Rodovia SP‑342, Espírito Santo do Pinhal – SP<br>
+    ☎ (19) 99676‑1443<br>
+    <a class="btn" href="https://www.innvernia.com/" target="_blank">🌐 Site oficial</a><br>
+    <a class="btn" href="https://www.instagram.com/innvernia/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d25160732-Reviews-InnVernia-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/InnVernia+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Guaspari -->
+<div class="card">
+  <div class="name">Vinícola Guaspari</div>
+  <div class="links">
+    🕒 Loja aberta diariamente 09:00–18:00 • Visitação com agendamento<br>
+    📍 Rua Pedro Ferrari, 300 – Parque dos Lagos<br>
+    ☎ (19) 3661‑9191<br>
+    <a class="btn" href="https://www.instagram.com/vinicolaguaspari/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d10826505-Reviews-Vinicola_Guaspari-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Guaspari+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Floresta São Pedro -->
+<div class="card">
+  <div class="name">Vinícola Floresta São Pedro</div>
+  <div class="links">
+    🕒 Wine bar: Sex–Dom 11:00–19:00 • Visitação: 10:00–17:00<br>
+    📍 Av. Padre Matheus Von Herkuizen, 355 – Areia Branca<br>
+    ☎ (19) 99751‑6192<br>
+    <a class="btn" href="https://www.instagram.com/vinicola_floresta/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d25160733-Reviews-Vinicola_Floresta_Sao_Pedro-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Floresta+São+Pedro" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Amana -->
+<div class="card">
+  <div class="name">Vinícola Amana</div>
+  <div class="links">
+    🕒 Ter–Qui 10:00–16:00 • Sex–Sáb 10:00–19:00 • Dom 10:00–16:00 (visitação com agendamento)<br>
+    📍 Estrada Vicinal Alberto Bartolomei s/n, Bairro Barthô – Espírito Santo do Pinhal, SP<br>
+    ☎ (19) 99667‑0151<br>
+    <a class="btn" href="https://www.instagram.com/vinicola_amana/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d25160731-Reviews-Vinícola_Amana-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Amana+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Bonventi -->
+<div class="card">
+  <div class="name">Vinícola Bonventi</div>
+  <div class="links">
+    🕒 Qui–Sex 11:00–21:00 • Sáb 11:00–22:00 • Dom 11:00–20:00 (visitação e degustações)<br>
+    📍 Estrada Vicinal Agenor Mondadori, S/N – Km 5, Santa Luzia – Espírito Santo do Pinhal, SP<br>
+    ☎ (11) 94045‑2065<br>
+    <a class="btn" href="https://www.instagram.com/vinicolabonventi/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Hotel_Review-g2346599-d28264718-Vinícola_Bonventi-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Bonventi+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Terra Nossa -->
+<div class="card">
+  <div class="name">Vinícola Terra Nossa</div>
+  <div class="links">
+    🕒 Qui–Sáb 10:00–17:00 • Dom 10:00–13:00 (visitação com agendamento)<br>
+    📍 Fazenda Boa Esperança, Bairro Usina – Espírito Santo do Pinhal, SP<br>
+    ☎ (11) 94714‑6237<br>
+    <a class="btn" href="https://www.instagram.com/vinicola_terranossa/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d28863696-Reviews-Vinícola_Terra_Nossa-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Terra+Nossa+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Mirantus -->
+<div class="card">
+  <div class="name">Vinícola Mirantus</div>
+  <div class="links">
+    🕒 Visitação com agendamento (Wine Bar e degustações – horário a confirmar)<br>
+    📍 Sítio Santo Antônio – Espírito Santo do Pinhal, SP<br>
+    ☎ (19) 99788‑7071<br>
+    <a class="btn" href="https://www.instagram.com/vinicola_mirantus/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d28826137-Reviews-Vinícola_Mirantus-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Mirantus+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<!-- Vinícola Merum -->
+<div class="card">
+  <div class="name">Vinícola Merum</div>
+  <div class="links">
+    🕒 Sex 16:00–21:00 • Sáb 10:00–21:00 • Dom 10:00–16:00 (entrada até 1h antes)<br>
+    📍 Estrada Vicinal Olavo de Almeida, KM 95 – Espírito Santo do Pinhal, SP<br>
+    ☎ (11) 98175‑1427<br>
+    <a class="btn" href="https://www.instagram.com/vinicolamerum/" target="_blank">📷 Instagram</a><br>
+    <a class="btn" href="https://www.tripadvisor.com.br/Attraction_Review-g2346599-d28826137-Reviews-Vinícola_Merum-Espirito_Santo_Do_Pinhal_State_of_Sao_Paulo.html" target="_blank">⭐ TripAdvisor</a><br>
+    <a class="btn" href="https://www.google.com/maps/search/Vinícola+Merum+Pinhal" target="_blank">📍 Rota</a>
+  </div>
+</div>
+
+<footer>
+Guia exclusivo para hóspedes • Pousada Famiglia Bartho • Espírito Santo do Pinhal – SP
+</footer>
+
+</div>
+</body>
+</html>
