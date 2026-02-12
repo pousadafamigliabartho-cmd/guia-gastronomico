@@ -9,6 +9,12 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+  .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
 
 /* --- Estilo geral --- */
 
@@ -170,6 +176,12 @@ h2, .name {
   background: rgba(255,255,255,0.6);
 
   transition: all 0.3s ease;
+
+  <div class="btn-group">
+  <a class="btn" href="#">Instagram</a>
+  <a class="btn" href="#">Mapa</a>
+  <a class="btn" href="#">Site</a>
+</div>
 }
 
 .btn:hover {
@@ -177,7 +189,6 @@ h2, .name {
   color: #fff;
   box-shadow: 0 6px 18px rgba(198,161,91,0.35);
   transform: translateY(-2px);
-}
 }
 .map-btn:hover {
   background-color: #6a4a3b;
@@ -685,6 +696,7 @@ cards.forEach(card => {
 </body>
 
 </html>
+
 
 
 
