@@ -12,16 +12,6 @@
 
 /* --- Estilo geral --- */
 
-body {
- font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #2b1d17;
-  min-height: 100vh;
-  background-color: #f8f4f0;
-}
-
-/* camada de fundo elegante */
 body::before {
   content: "";
   position: fixed;
@@ -29,7 +19,13 @@ body::before {
   z-index: -1;
 
   background-image:
-        url("background.jpg");
+    linear-gradient(rgba(248,244,240,0.75), rgba(248,244,240,0.75)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
   background-size: cover;
   background-position: center center;
@@ -694,4 +690,5 @@ cards.forEach(card => {
 </script>
 
 </body>
+
 </html>
