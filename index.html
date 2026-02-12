@@ -163,7 +163,9 @@ h2, .name {
 /* --- Botão de Rota --- */
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 8px 8px 0 0;
   padding: 8px 16px;
   border-radius: 999px;
@@ -173,15 +175,9 @@ h2, .name {
 
   border: 1px solid rgba(198,161,91,0.6);
   color: #5a3e36;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.85);
 
   transition: all 0.3s ease;
-
-  <div class="btn-group">
-  <a class="btn" href="#">Instagram</a>
-  <a class="btn" href="#">Mapa</a>
-  <a class="btn" href="#">Site</a>
-</div>
 }
 
 .btn:hover {
@@ -190,8 +186,13 @@ h2, .name {
   box-shadow: 0 6px 18px rgba(198,161,91,0.35);
   transform: translateY(-2px);
 }
-.map-btn:hover {
-  background-color: #6a4a3b;
+
+/* container que deixa lado a lado */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 /* --- Footer --- */
@@ -275,7 +276,18 @@ footer {
   0%,100% { opacity: 0.6; transform: scaleX(1); }
   50% { opacity: 1; transform: scaleX(1.2); }
 }
+/* ===== BOTÕES LADO A LADO ===== */
+.card .btn {
+  display: inline-flex;
+  margin-right: 8px;
+  margin-top: 8px;
+}
 
+.card .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 </head>
 
@@ -696,6 +708,7 @@ cards.forEach(card => {
 </body>
 
 </html>
+
 
 
 
